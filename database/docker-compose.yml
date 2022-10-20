@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  mariadb:
+    image: mariadb:10.7
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_USER=admin
+      - MYSQL_DATABASE=process_material
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    expose:
+      - 3306
+    networks:
+      - superset_default
+
+networks:
+  superset_default:
+    external: true

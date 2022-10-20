@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+requests
+mysql-connector-python
+sqlalchemy
+python-dateutil
